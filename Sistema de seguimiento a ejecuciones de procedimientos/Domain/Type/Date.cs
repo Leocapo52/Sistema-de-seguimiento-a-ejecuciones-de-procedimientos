@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sistema_de_seguimiento_a_ejecuciones_de_procedimientos.Clases
+namespace Sistema_de_seguimiento_a_ejecuciones_de_procedimientos.Domain.Type
 {
     public class Date
     {
         /// <summary>
-        /// time defined in format "0000" to "2359"
+        /// tiempo definido en formato "0000" to "2359"
         /// </summary>
         public int Time { get; set; }
         /// <summary>
-        /// date defined in format yearmonthday example 010216 to 2001 february 16
+        /// fecha definida en el formato: 010216 to 2001 february 16
         /// </summary>
         public int date { get; set; }
 
