@@ -10,9 +10,13 @@ namespace Sistema_de_seguimiento_a_ejecuciones_de_procedimientos.Domain.Entities
     public class Phases : Base
     {
 
-
         #region Constructors
-        public Phases(string IC, string Name, string Description = "N/A") : base (IC,Name,Description)
+        /// <summary>
+        /// constructor de fases
+        /// </summary>
+        /// <param name="IC"></param>
+        /// <param name="Name"></param>
+        public Phases(string IC, string Name) : base (IC,Name)
         {
 
         }

@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Sistema_de_seguimiento_a_ejecuciones_de_procedimientos.Domain.Utilities;
 using Sistema_de_seguimiento_a_ejecuciones_de_procedimientos.Domain.Type;
+using Sistema_de_seguimiento_a_ejecuciones_de_procedimientos.Domain.Common;
 
 namespace Sistema_de_seguimiento_a_ejecuciones_de_procedimientos.Domain.Entities
 {
-    public abstract class Base
+    public abstract class Base : Entity
     {
         #region Properties
 
@@ -23,15 +24,14 @@ namespace Sistema_de_seguimiento_a_ejecuciones_de_procedimientos.Domain.Entities
         /// <summary>
         /// descripcion de las operaciones
         /// </summary>
-        public string Description { get; set; }
+        public string? Description { get; set; }
         #endregion
 
         #region Constructors
-        public Base (string IC, string Name, string Description = "N/A")
+        public Base (string IC, string Name)
         {
             this.IdentificationCode = IC;
             this.Name = Name;
-            this.Description = Description;
         }
         #endregion
     }

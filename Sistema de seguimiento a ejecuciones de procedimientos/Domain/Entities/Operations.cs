@@ -18,15 +18,21 @@ namespace Sistema_de_seguimiento_a_ejecuciones_de_procedimientos.Domain.Entities
         /// <summary>
         /// codigo de la operacion
         /// </summary>
-        public string Code { get; set; }
+        public string OperationCode { get; set; }
+
+        /// <summary>
+        /// codigo de la unidad en la que se encuentra
+        /// </summary>
+        public string? UnitCode { get; set; }
+
         #endregion
 
 
 
         #region Constructor
-        public Operations(string ID, string Name, string Code, string Description = "N/A") : base(ID, Name, Description)
+        public Operations(string ID, string Name, string Code) : base(ID, Name)
         {
-            this.Code = Code;
+            this.OperationCode = Code;
             phases = new Queue<Phases>();
         }
         #endregion

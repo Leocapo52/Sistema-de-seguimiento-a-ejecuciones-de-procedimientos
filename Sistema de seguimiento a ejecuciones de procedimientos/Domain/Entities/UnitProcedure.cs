@@ -22,25 +22,16 @@ namespace Sistema_de_seguimiento_a_ejecuciones_de_procedimientos.Domain.Entities
         /// <summary>
         /// Fecha y hora de inicio 
         /// </summary>
-        public DateTime StartTime { get; set; }
-        /// <summary>
-        /// Fecha y hora de final
-        /// </summary>
-        public DateTime EndTime { get; set; }
-        /// <summary>
-        /// estado del procedimiento
-        /// </summary>
-        public State state { get; set; }
+        public string? UnitCode { get; set; }
+
         #endregion
 
         #region Constructors
-        public UnitProcedure(string ID, string Name, string Description, string Code) : base (ID, Name, Description)
+        public UnitProcedure(string ID, string Name, string Code) : base (ID, Name)
         {
             this.Code = Code;
-            StartTime = new DateTime();
-            EndTime = new DateTime();
             Operations = new Queue<Operations>();
-           
+       
 
         }
         #endregion
